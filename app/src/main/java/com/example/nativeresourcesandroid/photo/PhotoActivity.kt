@@ -8,9 +8,6 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.result.ActivityResult
-import androidx.activity.result.contract.ActivityResultContract
-import androidx.activity.result.contract.ActivityResultContracts
 import com.example.nativeresourcesandroid.R
 import kotlinx.android.synthetic.main.activity_photo.*
 
@@ -25,16 +22,16 @@ class PhotoActivity : AppCompatActivity() {
                     val permission = arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE)
                     requestPermissions(permission, PERMISSION_CODE)
                 } else {
-                    pickImageFromGalery()
+                    pickImageFromGallery()
                 }
             } else {
-                pickImageFromGalery()
+                pickImageFromGallery()
             }
         }
 
     }
 
-    private fun pickImageFromGalery() {
+    private fun pickImageFromGallery() {
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = "image/*"
         startActivityForResult(intent, IMAGE_PICK_CODE)
@@ -53,7 +50,7 @@ class PhotoActivity : AppCompatActivity() {
         when(requestCode){
             PERMISSION_CODE -> {
                 if (grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    pickImageFromGalery()
+                    pickImageFromGallery()
                 } else {
                     Toast.makeText(this, "Permissão negada", Toast.LENGTH_SHORT).show()
                 }
