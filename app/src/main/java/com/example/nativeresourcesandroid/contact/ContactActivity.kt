@@ -1,4 +1,4 @@
-package com.example.nativeresourcesandroid
+package com.example.nativeresourcesandroid.contact
 
 
 import android.annotation.SuppressLint
@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.nativeresourcesandroid.R
 
 class ContactActivity : AppCompatActivity() {
 
@@ -42,10 +43,12 @@ class ContactActivity : AppCompatActivity() {
 
         if (cursor != null){
             while (cursor.moveToNext()) {
-                concactList.add(Contact(
+                concactList.add(
+                    Contact(
                     cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME)),
                     cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
-                ))
+                )
+                )
             }
             cursor.close()
         }

@@ -1,4 +1,4 @@
-package com.example.nativeresourcesandroid
+package com.example.nativeresourcesandroid.agenda
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.provider.CalendarContract
 import android.provider.CalendarContract.Events.*
 import android.widget.Button
+import com.example.nativeresourcesandroid.R
 
 class AgendaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,10 +1,11 @@
-package com.example.nativeresourcesandroid
+package com.example.nativeresourcesandroid.contact
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.nativeresourcesandroid.R
 
 class ContactAdapter (val contactsList: ArrayList<Contact>) : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
 

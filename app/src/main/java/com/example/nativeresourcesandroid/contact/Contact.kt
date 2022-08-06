@@ -1,4 +1,4 @@
-package com.example.nativeresourcesandroid
+package com.example.nativeresourcesandroid.contact
 
 data class Contact(
     val name: String,
